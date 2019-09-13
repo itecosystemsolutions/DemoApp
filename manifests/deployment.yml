@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: itecosystemsolutionsdemoapp 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: itecosystemsolutionsdemoapp 
+    spec:
+      containers:
+        - name: itecosystemsolutionsdemoapp 
+          image: devfinderdemoapp.azurecr.io/itecosystemsolutionsdemoapp 
+          ports:
+          - containerPort: 80
